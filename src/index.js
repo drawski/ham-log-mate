@@ -6,6 +6,7 @@ import { process } from './adif-processor.js'
 program
   .version('0.1.0')
   .description('A tool for processing ham radio log files in ADIF format')
+  .usage('<file> [options]')
   .arguments('<file>')
   .option('-o, --output <file>', 'Output file')
   .option('-s, --set <fields...>', 'Set a new value for a field in the output file')
