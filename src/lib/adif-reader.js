@@ -1,12 +1,14 @@
-const parseRecord = record => {
-    // @FIXME improve the regex to allow < and > in the value
-    const fields = record.match(/<(\w+):(\d+)>([^<]*|<[^>]*>)/g)
+// @FIXME improve the regex to allow < and > in the value
+const globalRecordPattern = /<(\w+):(\d+)(:\w)?>([^<]*|<[^>]*>)/gi
+const recordPattern = /<(\w+):(\d+)(:\w)?>\s*(.*)\s*/i
 
+const parseRecord = record => {
+    const fields = record.match(globalRecordPattern)
     const logEntry = {}
 
     if (fields) {
         for (const field of fields) {
-            const [, tagName, fieldLength, fieldValue] = field.match(/<(\w+):(\d+)>(.*)/)
+            const [, tagName, fieldLength, fieldType, fieldValue] = field.match(recordPattern)
             logEntry[tagName] = fieldValue
         }
     }

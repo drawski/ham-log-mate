@@ -1,0 +1,24 @@
+{
+    "header": {
+        "ADIF_VER": "3.0.4",
+        "PROGRAMID": "TEST",
+        "PROGRAMVERSION": "1.0"
+    },
+    "entries": [
+        {
+            "STATION_CALLSIGN": "AA1ABC",
+            "MY_GRIDSQUARE": "DD90AA",
+            "CALL": "K1ABC"
+        },
+        {
+            "STATION_CALLSIGN": "AA1ABC",
+            "MY_GRIDSQUARE": "DD90AA",
+            "CALL": "WA2XYZ"
+        },
+        {
+            "STATION_CALLSIGN": "AA1ABC",
+            "MY_GRIDSQUARE": "DD90AA",
+            "CALL": "GB4A"
+        }
+    ]
+}
